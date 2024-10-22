@@ -1,0 +1,7 @@
+ls a
+cd a
+chown vadim main.c
+ls c
+rm main.c
+ls 
+exit
