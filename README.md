@@ -67,4 +67,4 @@ python cli.py machine_name test.zip script_example.txt
 
 ## Примеры и тесты
 
-
+![img.png](img/example.png)
