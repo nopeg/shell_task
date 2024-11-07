@@ -9,7 +9,7 @@ def setup_context():
     cur_path = DirPath("")
 
     cur_path_Path = lambda : root_path.joinpath(*[p for p in cur_path.n.split("/")]) if cur_path.n else root_path
-    cd = lambda p: cur_path.cd(p)
+    cd = lambda p: cur_path.cd(p, root_path)
     rev = lambda s: "".join([c for c in s[::-1]])
     ls = lambda s: '\n'.join([".", ".."] + [str(p.filename).replace('\\', '/').replace(f"{str(root_path.filename)}/{cur_path_Path().at}", "", 1) for p in cur_path_Path().iterdir()]) if not s else '\n'.join([".", ".."] + [str(p.filename).replace('\\', '/').replace(f"{str(root_path.filename)}/{cur_path_Path().at}", "", 1) for p in cur_path_Path().joinpath(*parse_path(s).split("/")).iterdir()])
     rm = lambda f: root_path.__init__(zf.delete_file(parse_path(cur_path.n + "/" + f)).zf)
